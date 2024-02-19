@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Week4</title>
+    </head>
+    <body>
+        <form name="email_form" action="subscribe.php"method="post">
+            <p>Please enter your e-mail address to subscribe toour newsletter.</p>
+            <p>E-Mail: <input type="text" name="email"></p>
+            <p><input type="submit" name="submit"value="Subscribe"></p>
+        </form>
+        <input type="button" name="message" value="Alert Me">
+        <input type="submit" name="checkout" value="Checkout">
+        <input type="reset" name="resetform" value="Reset">
+        <input type="image" src="picture.jpg"alt="Submit button" width="114" height="42">
+        <button type="submit">
+            <img src="picture.jpg" width="30"height="23" alt="Add to Cart">Add to Cart
+        </button><br>
+        Quantity:<input type="text" name="quantity" value="1"size="5" readonly><br><br>
+        Username:<input type="text" name="username"autofocus><br><br>
+        Password:<input type="password" name="password"maxlength="6"placeholder="Enter your password"><br><br>
+        Hidden:<input type="hidden" name="productid"value="widget">
+        <br>
+        Crust:<br>
+        <input type="radio" name="crust" value="thin">
+        Thin Crust<br>
+        <input type="radio" name="crust" value="deep" checked>
+        Deep Dish<br>
+        <input type="radio" name="crust" value="hand">Hand Tossed<br><br>
+        Toppings:<br><input type="checkbox" name="topping1" value="pepperoni">
+        Pepperoni<br><input type="checkbox" name="topping2" value="mushrooms">
+        Mushrooms<br><input type="checkbox" name="topping3" value="olives">
+        Olives<br>
+        Style:<br>
+        <select name="style_and_size">
+            <optgroup label="The New Yorker">
+                <option value="ny10">10"</option>
+                <option value="ny12">12"</option>
+                <option value="ny16">16"</option>
+            </optgroup>
+            <optgroup label="The Chicago">
+                <option value="chi10">10"</option>
+                <option value="chi12">12"</option>
+                <option value="chi16">16"</option>
+            </optgroup>
+        </select><br>
+        toppings:<br>
+        <select name="toppings" size="4" multiple>
+            <option value="pepperoni">Pepperoni</option>
+            <option value="sausage" selected>Sausage</option>
+            <option value="mushrooms">Mushrooms</option>
+            <option value="olives">Black olives</option>
+            <option value="onions">Onions</option>
+            <option value="bacon">Canadian bacon</option>
+            <option value="pineapple">Pineapple</option>
+        </select><br>
+        Comments:<br>
+        <textarea name="comments" placeholder="If you have any comments, please enter them here."></textarea><br>
+        <label for="quantity" id="quantity">Quantity:</label>
+        <input type="text" name="quantity" id="quantity"value="1" size="5"><br><br>
+        Crust:<br>
+        <input type="radio" name="crust" id="crust1"value="thin">
+        <label for="crust1">Thin Crust</label><br>
+        <input type="radio" name="crust" id="crust2"value="deep">
+        <label for="crust2">Deep Dish</label><br>
+        <input type="radio" name="crust" id="crust3"value="hand">
+        <label for="crust3">Hand Tossed</label><br><br>
+        Toppings:<br><input type="checkbox" name="topping1" id="topping1"value="pepperoni">
+        <label for="topping1">Pepperoni</label><br>
+        <input type="checkbox" name="topping2" id="topping2"value="mushrooms">
+        <label for="topping2">Mushrooms</label><br>
+        <input type="checkbox" name="topping3" id="topping3"value="Black Olives">
+        <label for="topping3">Black Olives</label><br><br>
+        <form name="order" action="order.php" method="post">
+            <fieldset>
+                <legend>Crust</legend>
+                <input type="radio" name="crust" id="crust1"value="thin">
+                <label for="crust1">Thin Crust</label><br>
+                <input type="radio" name="crust" id="crust2"value="deep">
+                <label for="crust2">Deep Dish</label><br>
+                <input type="radio" name="crust" id="crust3"value="hand">
+                <label for="crust3">Hand Tossed</label>
+            </fieldset><br>
+            <fieldset>
+                <legend>Toppings</legend>
+                <input type="checkbox" name="topping1" id="topping1"value="pepperoni">
+                <label for="topping1">Pepperoni</label><br>
+                <input type="checkbox" name="topping2" id="topping2"value="mushrooms">
+                <label for="topping2">Mushrooms</label><br>
+                <input type="checkbox" name="topping3" id="topping3"value="olives">
+                <label for="topping3">Black Olives</label>
+            </fieldset>
+        </form>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="fileUpload" id="fileUpload"><br>
+            <input type="submit" value="Upload">
+        </form>
+        Name: <input type="text" name="name" required><br>
+        Address: <input type="text" name="address"novalidate><br>
+        Zip: <input type="text" name="zip" required><br>
+        Phone: <input type="text" name="phone"required autocomplete="off"><br>
+        <input type="submit" name="submit" value="Submit Survey"><br>
+        <form name="email_form" action="survey.php"method="post">
+            <h3>Your information:</h3>
+            <label for="email">Your email address:</label>
+            <input type="email" name="email" id="email"required><br>
+            <label for="link">Your website:</label>
+            <input type="url" name="link" id="link"list="links"><br>
+            <label for="phone">Your phone number:</label>
+            <input type="tel" name="phone" id="phone"required><br><br>
+            <input type="submit" name="submit"value="Submit Survey">
+        </form>
+        <h3>Your information:</h3>
+        <form name="test_form" action="test.php" method="get">
+            <label for="investment">Monthly investment: </label>
+            <input type="number" name="investment"id="investment" min="100" max="1000"step="100" value="300"><br><br>
+            <label for="book">Rate the book from 1 to 5: </label>
+            <input type="range" name="book" id="book"min="1" max="5" step="1"><br><br>
+            <input type="submit" name="submit" value="Submit Survey">
+        </form>
+        Date and time:&nbsp;&nbsp;
+        <input type="datetime" name="datetime"><br><br>
+        Local date and time:&nbsp;&nbsp;
+        <input type="datetime-local"name="datetimelocal"><br><br>
+        Month:&nbsp;&nbsp;
+        <input type="month" name="month"><br><br>
+        Week:&nbsp;&nbsp;
+        <input type="week" name="week"><br><br>
+        Time:&nbsp;&nbsp;
+        <input type="time" name="time"><br><br>
+        Date:&nbsp;&nbsp;
+        <input type="date" name="date"><br>
+        <form method="get" action="http://www.google.com/search">
+            <input type="search" name="q" size="30"maxlength="255">
+            <input type="hidden" name="domains"value="http://www.murach.com">
+            <input type="hidden" name="sitesearch"value="http://www.murach.com">
+            <input type="submit" name="search" value="Search">
+        </form>
+    </body>
+</html>
